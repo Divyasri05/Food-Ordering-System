@@ -1,0 +1,57 @@
+{% extends 'adminBase.html' %}
+{% block title %}Servers{% endblock title %}
+{% block body %}
+<div class="ServersContent">
+    {% for i in range(servers|length) %}
+    <div class="serversCard">
+        <h3>ID#{{ servers[i][0] }}</h3>
+
+    <section class="serversSec1">
+    <div class="RfirstLast">
+        <span class="serverslabel">
+            Full Name:
+        </span>
+        <p>{{ servers[i][3] }} {{ servers[i][4] }}</p>
+    </div>
+    <div class="Rserversname">
+        <span class="serverslabel">
+            serversname:
+        </span>
+        <p>{{ servers[i][2] }}</p>
+    </div>
+    <div class="Rserversemail">
+        <span class="serverslabel">
+            Email:
+        </span>
+        <p>{{ servers[i][7] }}</p>
+    </div>
+</section>
+
+<section class="serversSec2">
+    <div class="Rserverspassword">
+        <span class="serverslabel">
+            Password:
+        </span>
+        <p>{{ servers[i][5] }}</p>
+    </div>
+    <div class="Rserversphone">
+        <span class="serverslabel">
+            Phone No:
+        </span>
+        <p>{{ servers[i][1] }}</p>
+    </div>
+    <div class="Rserversaddress">
+        <span class="serverslabel">
+            Address:
+        </span>
+        <p>{{ servers[i][6] }}</p>
+    </div>
+</section>
+<div class="orderButton">
+    <a href="/delServer/{{ servers[i][0] }}"><button>REMOVE</button></a>
+</div>
+
+</div>
+{% endfor %}
+</div>
+{% endblock body %}

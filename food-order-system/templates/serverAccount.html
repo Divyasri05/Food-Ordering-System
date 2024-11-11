@@ -1,0 +1,46 @@
+{% extends 'serverHome.html' %}
+
+{% block title %}Account{% endblock title %}
+
+{% block body %}
+<div class="AccountContent">
+    <h2 class="accountHeading">ACCOUNT INFO</h2>
+    <div class="firstLastName">
+        <span class="accountLabel">
+            Full Name:
+        </span>
+        <p>{{ server[3] }} {{ server[4] }}</p>
+    </div>
+    <div class="username">
+        <span class="accountLabel">
+            Username:
+        </span>
+        <p>{{ server[2] }}</p>
+    </div>
+    <div class="useremail">
+        <span class="accountLabel">
+            Email:
+        </span>
+        <p>{{ server[7] }}</p>
+    </div>
+    <div class="userpassword">
+        <span class="accountLabel">
+            Password:
+        </span>
+        <p>{{ server[5] }}</p>
+    </div>
+    <div class="userphone">
+        <span class="accountLabel">
+            Phone No:
+        </span>
+        <p>{{ server[1] }}</p>
+    </div>
+    <div class="useraddress">
+        <span class="accountLabel">
+            Address:
+        </span>
+        <p>{{ server[6] }}</p>
+    </div>
+</div>
+
+{% endblock body %}
